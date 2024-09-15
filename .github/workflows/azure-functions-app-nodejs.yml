@@ -65,7 +65,6 @@ jobs:
       shell: bash # For Linux, use bash
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        rm -r ./dist/**/*.map
         cp -r ./host.json ./package.json ./node_modules ./dist
         rm -r ./dist/node_modules/@types/
         rm -r ./dist/node_modules/azure-functions-core-tools/
