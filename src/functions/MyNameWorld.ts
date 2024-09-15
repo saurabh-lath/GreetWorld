@@ -3,7 +3,7 @@ import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/fu
 export async function MyNameWorld(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
 
-    const name = request.query.get('name') || await request.text() || 'world. Please enter your name for the greeting!';
+    const name = request.query.get('name') || await request.text() || 'world. Hoooooraaaaaaayyyyyyyyyyyyy this works!';
 
     return { body: `Hello, ${name}!` };
 };
