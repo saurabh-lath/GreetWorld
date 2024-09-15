@@ -67,7 +67,6 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         cp -r ./host.json ./package.json ./node_modules ./dist
         rm -r ./dist/node_modules/@types/
-        rm -r ./dist/node_modules/azure-functions-core-tools/
         rm -r ./dist/node_modules/typescript/
         cd ./dist
         mkdir dist
